@@ -1,0 +1,2285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أرونا - حين يصبح طفلك بطلاً لقصته 🌟</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Amiri:wght@400;700&family=Almarai:wght@300;400;700;800&family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #D4AF37;
+            --light-gold: #E8D4A0;
+            --pale-gold: #F5E6C8;
+            --primary-blue: #A8D8EA;
+            --light-blue: #C8E6F5;
+            --pale-blue: #E8F4F8;
+            --text-dark: #2C3E50;
+            --text-light: #ffffff;
+        }
+
+        body {
+            font-family: 'Almarai', 'Tajawal', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #F5E6C8 0%, #E8F4F8 100%);
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(212, 175, 55, 0.7) 0%, 
+                rgba(168, 216, 234, 0.7) 100%);
+            z-index: 1;
+            animation: gentleColorFade 40s ease-in-out infinite;
+        }
+
+        @keyframes gentleColorFade {
+            0% {
+                opacity: 1;
+                background: linear-gradient(135deg, 
+                    rgba(212, 175, 55, 0.7) 0%, 
+                    rgba(168, 216, 234, 0.7) 100%);
+            }
+            25% {
+                opacity: 0.95;
+                background: linear-gradient(135deg, 
+                    rgba(212, 175, 55, 0.75) 0%, 
+                    rgba(168, 216, 234, 0.65) 50%,
+                    rgba(212, 175, 55, 0.7) 100%);
+            }
+            50% {
+                opacity: 1;
+                background: linear-gradient(135deg, 
+                    rgba(168, 216, 234, 0.7) 0%,
+                    rgba(212, 175, 55, 0.7) 100%);
+            }
+            75% {
+                opacity: 0.95;
+                background: linear-gradient(135deg, 
+                    rgba(168, 216, 234, 0.75) 0%,
+                    rgba(212, 175, 55, 0.65) 50%,
+                    rgba(168, 216, 234, 0.7) 100%);
+            }
+            100% {
+                opacity: 1;
+                background: linear-gradient(135deg, 
+                    rgba(212, 175, 55, 0.7) 0%, 
+                    rgba(168, 216, 234, 0.7) 100%);
+            }
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(1.3) blur(1px);
+        }
+
+        .hero-slide.active {
+            opacity: 0.3;
+        }
+
+        .hero-slide:nth-child(1) {
+            background-image: url('images/hero-1.jpg');
+        }
+
+        .hero-slide:nth-child(2) {
+            background-image: url('images/hero-2.jpg');
+        }
+
+        .hero-slide:nth-child(3) {
+            background-image: url('images/hero-3.jpg');
+        }
+
+        .hero-slide:nth-child(4) {
+            background-image: url('images/hero-4.jpg');
+        }
+
+        /* Cartoon Particles */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: bounceFloat 20s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        .particle.star {
+            animation: cartoonTwinkle 3s infinite ease-in-out, bounceFloat 25s infinite ease-in-out;
+        }
+
+        @keyframes bounceFloat {
+            0%, 100% {
+                transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            50% {
+                transform: translateY(-50vh) translateX(20px) rotate(90deg) scale(1.1);
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(40px) rotate(180deg) scale(0.9);
+                opacity: 0;
+            }
+        }
+
+        @keyframes cartoonTwinkle {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1) rotate(0deg);
+            }
+            50% {
+                opacity: 0.7;
+                transform: scale(1.15) rotate(45deg);
+            }
+        }
+
+        /* Cartoon clouds */
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 100px;
+            animation: floatCloud 40s infinite linear;
+            z-index: 2;
+        }
+
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 100px;
+        }
+
+        @keyframes floatCloud {
+            0% {
+                transform: translateX(-200px);
+            }
+            100% {
+                transform: translateX(calc(100vw + 200px));
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+
+        .logo-container {
+    width: 550px;
+    height: 550px;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    animation: gentleBounce 4s infinite ease-in-out;
+}
+
+.logo-container img {
+    max-width: 550px;
+    max-height: 550px;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
+}
+
+        @keyframes gentleBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-4px);
+            }
+        }
+
+        /* Gentle sparkle effect */
+        .logo-container::before,
+        .logo-container::after {
+            content: '✨';
+            position: absolute;
+            font-size: 2rem;
+            animation: gentleSparkle 4s infinite ease-in-out;
+        }
+
+        .logo-container::before {
+            top: -20px;
+            right: -20px;
+            animation-delay: 0s;
+        }
+
+        .logo-container::after {
+            bottom: -20px;
+            left: -20px;
+            animation-delay: 2s;
+        }
+
+        @keyframes gentleSparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+        }
+
+        
+
+        .logo-placeholder {
+            font-size: 5rem;
+            font-family: 'El Messiri', 'Amiri', serif;
+            font-weight: 700;
+            text-shadow: 
+                3px 3px 0px rgba(212, 175, 55, 0.5),
+                -2px -2px 0px rgba(168, 216, 234, 0.5),
+                0 6px 15px rgba(0, 0, 0, 0.5);
+            animation: textWobble 4s infinite ease-in-out;
+        }
+
+        @keyframes textWobble {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.05) rotate(-2deg); }
+            50% { transform: scale(1) rotate(1deg); }
+            75% { transform: scale(1.05) rotate(-1deg); }
+        }
+
+        .hero-title {
+            font-family: 'El Messiri', 'Amiri', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 
+                3px 3px 0px rgba(44, 62, 80, 0.5),
+                0 4px 15px rgba(0, 0, 0, 0.5);
+            animation: titleFade 2s ease-out;
+        }
+
+        @keyframes titleFade {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: white;
+            text-shadow: 
+                2px 2px 0px rgba(44, 62, 80, 0.4),
+                0 3px 10px rgba(0, 0, 0, 0.4);
+            animation: subtitleFade 1.5s ease-out 0.3s backwards;
+        }
+
+        @keyframes subtitleFade {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: #2C3E50;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 25px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            animation: descFadeIn 1.5s ease-out 0.6s backwards;
+            font-weight: 500;
+        }
+
+        @keyframes descFadeIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .logo-container {
+            width: 280px;
+            height: 280px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: visible;
+            animation: gentleBounce 4s infinite ease-in-out;
+        }
+
+        @keyframes gentleBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* Gentle sparkle effect */
+        .logo-container::before,
+        .logo-container::after {
+            content: '✨';
+            position: absolute;
+            font-size: 2rem;
+            animation: gentleSparkle 4s infinite ease-in-out;
+        }
+
+        .logo-container::before {
+            top: -20px;
+            right: -20px;
+            animation-delay: 0s;
+        }
+
+        .logo-container::after {
+            bottom: -20px;
+            left: -20px;
+            animation-delay: 2s;
+        }
+
+        @keyframes gentleSparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+        }
+
+        .logo-container img {
+            max-width: 280px;
+            max-height: 280px;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
+        }
+
+
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #D4AF37 0%, #A8D8EA 100%);
+            border: 3px solid white;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+            animation: buttonFade 1.5s ease-out 0.9s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        @keyframes buttonFade {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            animation: cartoonBounceDown 2s infinite;
+        }
+
+        @keyframes cartoonBounceDown {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-15px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-8px);
+            }
+        }
+
+        .scroll-indicator i {
+            font-size: 2.5rem;
+            color: #D4AF37;
+            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+        }
+
+        /* Cartoon Vertical Navigation */
+        .vertical-nav {
+            position: fixed;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .nav-item {
+            width: 65px;
+            height: 65px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            border: 3px solid rgba(212, 175, 55, 0.3);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .nav-item:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+            border-color: #D4AF37;
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .nav-item i {
+            font-size: 2rem;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-item.active {
+            background: linear-gradient(135deg, #D4AF37, #A8D8EA);
+            transform: scale(1.15);
+            border-color: #D4AF37;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        .nav-item.active i {
+            color: white;
+            font-size: 2.2rem;
+        }
+
+        .nav-tooltip {
+            position: absolute;
+            right: 80px;
+            background: #2C3E50;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            font-size: 1rem;
+            font-weight: 700;
+            border: 3px solid #D4AF37;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-item:hover .nav-tooltip {
+            opacity: 1;
+        }
+
+        /* Cartoon WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #25D366, #20BA5A);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            border: 3px solid white;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-button i {
+            font-size: 2.2rem;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 5%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Cartoon decorations */
+        section::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        #about::before {
+            background: #D4AF37;
+            top: 50px;
+            left: 50px;
+        }
+
+        #vision-mission::before {
+            background: #A8D8EA;
+            bottom: 50px;
+            right: 50px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-family: 'El Messiri', 'Amiri', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            text-shadow: 
+                2px 2px 0px rgba(212, 175, 55, 0.2),
+                -1px -1px 0px rgba(168, 216, 234, 0.2);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, #D4AF37, #A8D8EA);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 2rem;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        /* About Section */
+        #about {
+            background: linear-gradient(135deg, #F5E6C8 0%, #E8F4F8 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 30px;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.15),
+                inset 0 2px 0 rgba(255, 255, 255, 0.8);
+            transition: all 0.4s ease;
+            text-align: center;
+            border: 5px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '✨';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover::before {
+            opacity: 1;
+            transform: rotate(360deg) scale(1.3);
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
+            border-color: #D4AF37;
+        }
+
+        .about-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, #D4AF37, #A8D8EA);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+            animation: gentleFloat 4s infinite ease-in-out;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .about-icon i {
+            font-size: 2.8rem;
+            color: white;
+        }
+
+        .about-card h3 {
+            font-family: 'El Messiri', 'Amiri', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #D4AF37;
+            text-shadow: 1px 1px 0px rgba(168, 216, 234, 0.2);
+        }
+
+        .about-card p {
+            line-height: 1.8;
+            color: #666;
+            font-size: 1.05rem;
+        }
+
+        /* Vision & Mission Section */
+        #vision-mission {
+            background: linear-gradient(135deg, #E8F4F8 0%, #F5E6C8 100%);
+        }
+
+        .vm-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .vm-box {
+            padding: 3rem;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+        }
+
+        .vm-box:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .vm-box.vision {
+            background: linear-gradient(135deg, #A8D8EA 0%, #D4AF37 100%);
+        }
+
+        .vm-box.mission {
+            background: linear-gradient(135deg, #D4AF37 0%, #A8D8EA 100%);
+        }
+
+        .vm-box h3 {
+            font-family: 'El Messiri', 'Amiri', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .vm-box p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: white;
+            position: relative;
+            z-index: 1;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Values Section */
+        #values {
+            background: linear-gradient(135deg, #F5E6C8 0%, #E8F4F8 100%);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 4px solid transparent;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            transition: height 0.3s ease;
+        }
+
+        .value-card:nth-child(1)::after { background: #D4AF37; }
+        .value-card:nth-child(2)::after { background: #A8D8EA; }
+        .value-card:nth-child(3)::after { background: #D4AF37; }
+        .value-card:nth-child(4)::after { background: #A8D8EA; }
+
+        .value-card:hover::after {
+            height: 100%;
+            opacity: 0.08;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .value-card i {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #D4AF37, #A8D8EA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .value-card h3 {
+            font-family: 'El Messiri', 'Amiri', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .value-card p {
+            line-height: 1.7;
+            color: #666;
+            font-size: 1.02rem;
+        }
+
+        /* Survey Section */
+        #survey {
+            background: linear-gradient(135deg, #E8F4F8 0%, #F5E6C8 100%);
+        }
+
+        /* How to Order Section */
+        #how-to-order {
+            background: linear-gradient(135deg, #F5E6C8 0%, #E8F4F8 100%);
+        }
+
+        .order-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            border: 3px solid transparent;
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+            border-color: #D4AF37;
+        }
+
+        .step-number {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #D4AF37, #A8D8EA);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .step-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(168, 216, 234, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .step-icon i {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #D4AF37, #A8D8EA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .step-card h3 {
+            font-family: 'El Messiri', 'Amiri', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .step-card p {
+            line-height: 1.8;
+            color: #666;
+            font-size: 1.05rem;
+        }
+
+        .step-card.highlight {
+            background: linear-gradient(135deg, #D4AF37 0%, #A8D8EA 100%);
+            border-color: #D4AF37;
+        }
+
+        .step-card.highlight h3,
+        .step-card.highlight p {
+            color: white;
+        }
+
+        .step-card.highlight .step-icon {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .step-card.highlight .step-icon i {
+            -webkit-text-fill-color: white;
+        }
+
+        /* Specialist Section */
+        #specialist {
+            background: linear-gradient(135deg, #E8F4F8 0%, #F5E6C8 100%);
+        }
+
+        .specialist-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .specialist-image {
+            position: relative;
+        }
+
+        .image-placeholder {
+            width: 280px;
+            height: 280px;
+            background: linear-gradient(135deg, #D4AF37, #A8D8EA);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid white;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-placeholder i {
+            font-size: 10rem;
+            color: white;
+            opacity: 0.5;
+        }
+
+        .specialist-image img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .specialist-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .specialist-content h3 {
+            font-family: 'El Messiri', 'Amiri', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #D4AF37;
+            margin-bottom: 0.5rem;
+        }
+
+        .specialist-title {
+            font-size: 1.3rem;
+            color: #A8D8EA;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .specialist-bio p {
+            line-height: 1.9;
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .specialist-bio strong {
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .specialist-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .highlight-item i {
+            font-size: 2rem;
+            color: #D4AF37;
+        }
+
+        .highlight-item span {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .specialist-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .image-placeholder,
+            .specialist-image img {
+                margin: 0 auto;
+            }
+
+            .specialist-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-item {
+                justify-content: center;
+            }
+        }
+
+        .survey-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #A8D8EA 0%, #D4AF37 100%);
+            padding: 4rem;
+            border-radius: 30px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+            border: 4px solid white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .survey-intro {
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .survey-intro h3 {
+            font-family: 'El Messiri', 'Amiri', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .survey-intro p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+        }
+
+        .survey-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .form-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .form-section-title {
+            font-family: 'El Messiri', 'Amiri', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #D4AF37;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid #E8D4A0;
+            text-shadow: 1px 1px 0px rgba(168, 216, 234, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.7rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            font-family: 'Almarai', 'Tajawal', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #D4AF37;
+            box-shadow: 
+                0 0 0 3px rgba(212, 175, 55, 0.15),
+                inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.1rem 2.8rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Almarai', 'Tajawal', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #D4AF37, #A8D8EA);
+            color: white;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+            border: 3px solid white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #D4AF37;
+            border: 3px solid #D4AF37;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-secondary:hover {
+            background: #D4AF37;
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #E8F4F8 0%, #F5E6C8 100%);
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2.3rem;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.25);
+            border-color: #D4AF37;
+        }
+
+        .contact-item i {
+            font-size: 2.8rem;
+            color: #D4AF37;
+        }
+
+        .contact-item a {
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover a {
+            color: #D4AF37;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '⭐ 🌙 ✨ 💫 🌟';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            font-size: 1.5rem;
+            opacity: 0.3;
+            animation: starSlide 20s infinite linear;
+        }
+
+        @keyframes starSlide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        footer p {
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                padding: 1.2rem;
+            }
+
+            .logo-container {
+                width: 200px;
+                height: 200px;
+            }
+
+            .logo-container img {
+                max-width: 200px;
+                max-height: 200px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .vertical-nav {
+                left: 10px;
+                gap: 8px;
+            }
+
+            .nav-item {
+                width: 50px;
+                height: 50px;
+            }
+
+            .nav-item i {
+                font-size: 1.5rem;
+            }
+
+            .nav-item.active i {
+                font-size: 1.6rem;
+            }
+
+            .whatsapp-button {
+                right: 10px;
+                bottom: 10px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-button i {
+                font-size: 1.8rem;
+            }
+
+            .survey-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .survey-form {
+                padding: 2rem 1.5rem;
+            }
+
+            .survey-intro h3 {
+                font-size: 1.8rem;
+            }
+
+            .survey-intro p {
+                font-size: 1.05rem;
+            }
+
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 0.9rem 1.8rem;
+                font-size: 1rem;
+            }
+
+            .form-section-title {
+                font-size: 1.2rem;
+            }
+
+            .form-group label {
+                font-size: 0.95rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 0.9rem;
+                font-size: 0.95rem;
+            }
+
+            .about-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .about-icon i {
+                font-size: 2rem;
+            }
+
+            .about-card {
+                padding: 2rem;
+            }
+
+            .about-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .about-card p {
+                font-size: 1rem;
+            }
+
+            .vm-container,
+            .about-content,
+            .values-grid,
+            .order-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .vm-box {
+                padding: 2rem;
+            }
+
+            .vm-box h3 {
+                font-size: 1.8rem;
+            }
+
+            .vm-box p {
+                font-size: 1rem;
+            }
+
+            .value-card {
+                padding: 2rem;
+            }
+
+            .value-card i {
+                font-size: 2.8rem;
+            }
+
+            .value-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .value-card p {
+                font-size: 0.95rem;
+            }
+
+            .step-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .step-number {
+                width: 38px;
+                height: 38px;
+                font-size: 1.1rem;
+                top: 12px;
+                right: 12px;
+            }
+
+            .step-icon {
+                width: 75px;
+                height: 75px;
+            }
+
+            .step-icon i {
+                font-size: 2.2rem;
+            }
+
+            .step-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .step-card p {
+                font-size: 0.95rem;
+            }
+
+            .specialist-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .image-placeholder,
+            .specialist-image img {
+                width: 220px;
+                height: 220px;
+                margin: 0 auto;
+            }
+
+            .image-placeholder i {
+                font-size: 7rem;
+            }
+
+            .specialist-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .specialist-content h3 {
+                font-size: 2rem;
+            }
+
+            .specialist-title {
+                font-size: 1.1rem;
+            }
+
+            .specialist-bio p {
+                font-size: 1rem;
+            }
+
+            .specialist-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-item {
+                justify-content: center;
+            }
+
+            .highlight-item i {
+                font-size: 1.6rem;
+            }
+
+            .highlight-item span {
+                font-size: 0.9rem;
+            }
+
+            .contact-item {
+                padding: 1.8rem 1.5rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-item i {
+                font-size: 2.2rem;
+            }
+
+            .contact-item a {
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #D4AF37 0%, #A8D8EA 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid white;
+            border-radius: 50%;
+            animation: gentleSpin 1.5s linear infinite;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes gentleSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Vertical Navigation -->
+    <nav class="vertical-nav">
+        <div class="nav-item active" data-section="hero">
+            <i class="fas fa-home"></i>
+            <span class="nav-tooltip">🏠 الرئيسية</span>
+        </div>
+        <div class="nav-item" data-section="about">
+            <i class="fas fa-heart"></i>
+            <span class="nav-tooltip">💖 عن المشروع</span>
+        </div>
+        <div class="nav-item" data-section="vision-mission">
+            <i class="fas fa-rocket"></i>
+            <span class="nav-tooltip">🚀 الرؤية والرسالة</span>
+        </div>
+        <div class="nav-item" data-section="specialist">
+            <i class="fas fa-user-graduate"></i>
+            <span class="nav-tooltip">👩‍💼 عن المختصة</span>
+        </div>
+        <div class="nav-item" data-section="values">
+            <i class="fas fa-star"></i>
+            <span class="nav-tooltip">⭐ قيمنا</span>
+        </div>
+        <div class="nav-item" data-section="how-to-order">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="nav-tooltip">🎁 كيف تطلب</span>
+        </div>
+        <div class="nav-item" data-section="survey">
+            <i class="fas fa-file-alt"></i>
+            <span class="nav-tooltip">📝 الاستبيان</span>
+        </div>
+        <div class="nav-item" data-section="contact">
+            <i class="fas fa-envelope"></i>
+            <span class="nav-tooltip">✉️ تواصل معنا</span>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/00963941777624" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active"></div>
+            <div class="hero-slide"></div>
+            <div class="hero-slide"></div>
+            <div class="hero-slide"></div>
+        </div>
+        <div class="hero-background"></div>
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="logo-container">
+                <!-- استبدل التعليق التالي بإزالة علامات التعليق عن السطر التالي وضع مسار اللوغو -->
+                <img src="images/Logo_Aruna.png" alt="Aruna Logo">
+                <!-- 
+                <div class="logo-placeholder">أرونا</div>
+                -->
+            </div>
+            <h1 class="hero-title">حين يصبح طفلك بطلاً لقصته 🌟</h1>
+            <p class="hero-subtitle">رحلة إبداعية ونفسية متكاملة ✨</p>
+            <p class="hero-description">
+                ليس مجرد دار لنشر القصص، بل تجربة شفائية تحول طفلك إلى بطل قصته الخاصة 🦸‍♂️
+                نصمم عوالم مخصصة تعزز الثقة بالنفس وتبني الشخصية من خلال قوة السرد القصصي 📚💫
+            </p>
+            <a href="#survey" class="cta-button">🎨 ابدأ رحلة طفلك الآن</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title">ما هو مشروع أرونا؟ 🎭</h2>
+            <p class="section-subtitle">
+                تجربة إبداعية فريدة تجمع بين العلاج بالقصة والتصميم المخصص 🌈
+            </p>
+        </div>
+        <div class="about-content">
+            <div class="about-card">
+                <div class="about-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h3>الاستشفاء العاطفي 💝</h3>
+                <p>
+                    نغرس مشاعر إيجابية محددة كالطمأنينة والقبول من خلال منح الطفل "قوة خارقة" في القصة،
+                    لتلبية احتياجاته النفسية وتعويض ما قد ينقصه في الواقع 🦸‍♀️
+                </p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h3>البطل الحقيقي 🌟</h3>
+                <p>
+                    طفلك هو نجم القصة! نصمم عوالم خاصة تشبهه تماماً، مع دمج شخصيات داعمة من حياته الحقيقية
+                    كالجد أو المعلم لتعزيز الروابط الاجتماعية 👨‍👩‍👧‍👦
+                </p>
+            </div>
+            <div class="about-card">
+                <div class="about-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>قصص مخصصة 📖</h3>
+                <p>
+                    كل قصة مصممة بعناية لتناسب شخصية طفلك واحتياجاته، مع رسومات إبداعية تحاكي خياله
+                    وتجعله يعيش التجربة بكل حواسه 🎨
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission">
+        <div class="section-header">
+            <h2 class="section-title">رؤيتنا ورسالتنا 🎯</h2>
+        </div>
+        <div class="vm-container">
+            <div class="vm-box vision">
+                <h3>👁️ الرؤية</h3>
+                <p>
+                    أن نكون الوجهة الرائدة عالمياً في صناعة أدب الطفل المخصص، حيث تتحول كل قصة إلى رحلة تربوية ونفسية فريدة
+                    تمكّن الأطفال من اكتشاف قواهم الكامنة ومواجهة تحدياتهم بمرونة وإبداع 🚀
+                </p>
+            </div>
+            <div class="vm-box mission">
+                <h3>🎯 الرسالة</h3>
+                <p>
+                    تمكين الطفل نفسياً وسلوكياً من خلال دمج تقنيات "العلاج بالقصة" مع التصميم الإبداعي المخصص.
+                    نهدف إلى تقديم محتوى أدبي وبصري يجعل من الطفل بطلاً لقصته، مما يعزز ثقته بنفسه ويمنح الوالدين
+                    أداة تربوية مبتكرة ومؤثرة تتجاوز حدود القراءة التقليدية 💪
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Specialist Section -->
+    <section id="specialist">
+        <div class="section-header">
+            <h2 class="section-title">عن المختصة 👩‍💼</h2>
+            <p class="section-subtitle">خبرة وشغف في خدمة الطفولة</p>
+        </div>
+        <div class="specialist-container">
+            <div class="specialist-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <!-- يمكنك إضافة صورة هنا لاحقاً -->
+                <!-- <img src="images/dima.jpg" alt="ديما الأشهب"> -->
+            </div>
+            <div class="specialist-content">
+                <h3>ديما الأشهب</h3>
+                <p class="specialist-title">مؤسسة مشروع أرونا</p>
+                <div class="specialist-bio">
+                    <p>
+                        <strong>ديما الأشهب</strong> صاحبة مشروع أرونا، تمتلك خبرة تمتد لأكثر من <strong>15 عاماً</strong> في مجال حماية الطفولة والتصميم الإبداعي.
+                    </p>
+                    <p>
+                        بفضل خبرتها الواسعة في فهم احتياجات الأطفال النفسية والعاطفية، تجمع ديما بين <strong>المعرفة المهنية العميقة</strong> و<strong>الشغف بالتصميم الفني</strong> لتقديم قصص علاجية مخصصة تلامس قلب كل طفل.
+                    </p>
+                    <p>
+                        رؤيتها في <strong>تمكين الأطفال</strong> من خلال القصص المخصصة جعلت من مشروع أرونا منصة فريدة تجمع بين <strong>العلم والفن والإبداع</strong> لخدمة الطفولة.
+                    </p>
+                </div>
+                <div class="specialist-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>+15 عاماً من الخبرة</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>متخصصة في حماية الطفولة</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-palette"></i>
+                        <span>خبيرة في التصميم الإبداعي</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values">
+        <div class="section-header">
+            <h2 class="section-title">قيمنا الجوهرية 💎</h2>
+            <p class="section-subtitle">المبادئ التي نؤمن بها ونعمل من خلالها ✨</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fas fa-user-circle"></i>
+                <h3>الفردية 🎨</h3>
+                <p>كل طفل هو بطل فريد، وقصته يجب أن تشبهه تماماً</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-heart-pulse"></i>
+                <h3>الدعم النفسي 💝</h3>
+                <p>نكتب بوعي عاطفي يلامس احتياجات الطفل العميقة</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-palette"></i>
+                <h3>الجودة البصرية 🎨</h3>
+                <p>تصاميم تحاكي خيال الطفل وتجذب انتباهه ليعيش التجربة بكل حواسه</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-infinity"></i>
+                <h3>الأثر المستدام 🌱</h3>
+                <p>لا نقدم مجرد كتاب، بل نبني ذكرى تعزز بناء الشخصية لسنوات طويلة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Order Section -->
+    <section id="how-to-order">
+        <div class="section-header">
+            <h2 class="section-title">كيف تطلب الخدمة؟ 🎁</h2>
+            <p class="section-subtitle">خطوات بسيطة للحصول على قصة فريدة لطفلك</p>
+        </div>
+        <div class="order-steps">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>تعبئة الاستبيان</h3>
+                <p>املأ الاستبيان الخاص بطفلك الموجود في أسفل الصفحة بكل المعلومات المطلوبة</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>إرسال الاستبيان</h3>
+                <p>يمكنك إرساله مباشرة عبر الواتساب أو تحميله كملف نصي وإرساله لاحقاً</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>التواصل والتفاصيل</h3>
+                <p>سنتواصل معك عبر الواتساب لمزيد من التفاصيل والتأكد من كل المعلومات</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>النتيجة النهائية</h3>
+                <p>قصة مصممة فنياً ومطبوعة بطباعة فاخرة بقياس يتم تحديده حسب احتياجك</p>
+            </div>
+
+            <div class="step-card highlight">
+                <div class="step-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3>هدية مميزة</h3>
+                <p>يمكنك طلب هذه الخدمة لطفلك أو كهدية قيمة لطفل آخر ليكون بطل قصته الخاصة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey Section -->
+    <section id="survey">
+        <div class="section-header">
+            <h2 class="section-title">ابدأ رحلة طفلك 🚀</h2>
+            <p class="section-subtitle">املأ الاستبيان وانطلق في مغامرة إبداعية فريدة ✨</p>
+        </div>
+        <div class="survey-container">
+            <div class="survey-intro">
+                <h3>استبيان تخصيص القصة 📋</h3>
+                <p>ساعدنا في تصميم القصة المثالية لطفلك من خلال الإجابة على الأسئلة التالية 💫</p>
+            </div>
+            <form class="survey-form" id="surveyForm">
+                <!-- معلومات أساسية -->
+                <div class="form-section">
+                    <h4 class="form-section-title">👤 المعلومات الأساسية</h4>
+                    <div class="form-group">
+                        <label for="childName">🎈 اسم الطفل *</label>
+                        <input type="text" id="childName" name="childName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate">🎂 تاريخ الميلاد *</label>
+                        <input type="date" id="birthDate" name="birthDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">📱 رقم الهاتف *</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">📧 البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="motherName">👩 اسم الأم *</label>
+                        <input type="text" id="motherName" name="motherName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fatherName">👨 اسم الأب *</label>
+                        <input type="text" id="fatherName" name="fatherName" required>
+                    </div>
+                </div>
+
+                <!-- فهم عالم الطفل -->
+                <div class="form-section">
+                    <h4 class="form-section-title">🌍 فهم عالم الطفل الشخصي</h4>
+                    <div class="form-group">
+                        <label for="hobby">🎮 ما هي الهواية أو اللعبة المفضلة؟ *</label>
+                        <textarea id="hobby" name="hobby" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="favoriteHero">🦸‍♂️ من هو البطل الخيالي أو الحيوان المفضل؟ *</label>
+                        <textarea id="favoriteHero" name="favoriteHero" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="favoriteColor">🎨 ما هو اللون المفضل؟ *</label>
+                        <input type="text" id="favoriteColor" name="favoriteColor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="safePlace">🏡 ما هو المكان الذي يشعر فيه بالأمان؟ *</label>
+                        <input type="text" id="safePlace" name="safePlace" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="secretWord">🔑 هل لديه كلمة سر أو عبارة يحب تكرارها؟</label>
+                        <input type="text" id="secretWord" name="secretWord">
+                    </div>
+                </div>
+
+                <!-- التحدي أو السلوك -->
+                <div class="form-section">
+                    <h4 class="form-section-title">🎯 تحديد التحدي أو السلوك</h4>
+                    <div class="form-group">
+                        <label for="behavior">💭 ما هو السلوك المحدد الذي ترغبون في تعديله؟ *</label>
+                        <textarea id="behavior" name="behavior" required placeholder="مثلاً: الخوف من الظلام، العناد، الغيرة من أخٍ جديد، التنمر..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="behaviorExpression">😊 كيف يعبر الطفل عن هذا التحدي؟ *</label>
+                        <textarea id="behaviorExpression" name="behaviorExpression" required placeholder="هل يبكي، هل ينعزل، هل يغضب؟"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="anxietySituations">😰 ما هي المواقف المتكررة التي تسبب له القلق؟ *</label>
+                        <textarea id="anxietySituations" name="anxietySituations" required></textarea>
+                    </div>
+                </div>
+
+                <!-- نقاط القوة -->
+                <div class="form-section">
+                    <h4 class="form-section-title">🏆 استكشاف نقاط القوة</h4>
+                    <div class="form-group">
+                        <label for="strengths">💪 ما هو الشيء الذي يتقنه الطفل ويشعر بالفخر؟ *</label>
+                        <textarea id="strengths" name="strengths" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="braveMoment">🦁 اذكر موقفاً أظهر فيه الطفل شجاعة أو طيبة غير معتادة *</label>
+                        <textarea id="braveMoment" name="braveMoment" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills">⚡ ما هي المهارة التي يمتلكها؟ *</label>
+                        <textarea id="skills" name="skills" required placeholder="مثل: الخيال الواسع، السرعة، دقة الملاحظة، القدرة على الإقناع..."></textarea>
+                    </div>
+                </div>
+
+                <!-- الحالة الشعورية -->
+                <div class="form-section">
+                    <h4 class="form-section-title">❤️ الحالة الشعورية والأهداف</h4>
+                    <div class="form-group">
+                        <label for="desiredFeeling">✨ ما هو الشعور الذي تريدونه للطفل بعد سماع القصة؟ *</label>
+                        <input type="text" id="desiredFeeling" name="desiredFeeling" required placeholder="مثلاً: الطمأنينة، الشجاعة، القبول...">
+                    </div>
+                    <div class="form-group">
+                        <label for="superpower">⚡ ما هي القوة الخارقة التي يتمنى الطفل امتلاكها؟</label>
+                        <input type="text" id="superpower" name="superpower">
+                    </div>
+                    <div class="form-group">
+                        <label for="supportiveCharacter">👥 هل هناك شخصية داعمة في حياة الطفل؟</label>
+                        <textarea id="supportiveCharacter" name="supportiveCharacter" placeholder="جد، معلم، صديق..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> إرسال الاستبيان 🚀
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="downloadBtn">
+                        <i class="fas fa-download"></i> تحميل كملف نصي 📥
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <h2 class="section-title">تواصل معنا 📞</h2>
+            <p class="section-subtitle">نحن هنا للإجابة على جميع استفساراتك 💬</p>
+        </div>
+        <div class="contact-content">
+            <p style="font-size: 1.3rem; line-height: 1.9; margin-bottom: 2rem; font-weight: 600;">
+                لديك سؤال أو استفسار؟ لا تتردد في التواصل معنا 📱✨
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/00963941777624" target="_blank">+963 941 777 624</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-facebook"></i>
+                    <a href="https://www.facebook.com/share/1aD8YXNo1k/" target="_blank">تابعنا على فيسبوك</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/dima-alashhab/?skipRedirect=true" target="_blank">ديما الأشهب - LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 مشروع أرونا - جميع الحقوق محفوظة 🌟</p>
+        <p style="margin-top: 0.8rem; font-size: 1rem;">صُمم بـ <i class="fas fa-heart" style="color: #D4AF37;"></i> لأطفالنا الأبطال 🦸‍♂️🦸‍♀️</p>
+        <p style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.8;">
+            تصميم وتطوير: <a href="https://pro-sss.com" target="_blank" style="color: #D4AF37; text-decoration: none; font-weight: 600;">Pro S; (Pro-sss.com)</a>
+        </p>
+    </footer>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Gentle Particles - Calm and Elegant
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const goldColors = ['#D4AF37', '#E8D4A0'];
+            const blueColors = ['#A8D8EA', '#C8E6F5'];
+            
+            // Create gentle particles - very few and slow
+            for (let i = 0; i < 10; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 10 + 6;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                const isGold = i % 2 === 0;
+                particle.style.background = isGold 
+                    ? goldColors[Math.floor(Math.random() * goldColors.length)]
+                    : blueColors[Math.floor(Math.random() * blueColors.length)];
+                particle.style.animationDelay = Math.random() * 30 + 's';
+                particle.style.animationDuration = (Math.random() * 20 + 35) + 's';
+                particlesContainer.appendChild(particle);
+            }
+            
+            // Create subtle stars - few and calm
+            for (let i = 0; i < 12; i++) {
+                const star = document.createElement('div');
+                star.className = 'particle star';
+                const size = Math.random() * 2 + 2;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.background = i % 2 === 0 ? '#D4AF37' : '#A8D8EA';
+                star.style.animationDelay = Math.random() * 8 + 's';
+                star.style.animationDuration = (Math.random() * 15 + 40) + 's';
+                particlesContainer.appendChild(star);
+            }
+        }
+        createParticles();
+
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        setInterval(nextSlide, 5000);
+
+        // Smooth Scrolling for Navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const section = this.getAttribute('data-section');
+                const targetSection = document.getElementById(section);
+                
+                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+                
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Update active nav on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-section') === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // CTA Button
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('survey').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Form Submission
+        document.getElementById('surveyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            let message = '🌟 *استبيان مشروع أرونا* 🌟\n\n';
+            
+            message += '📋 *المعلومات الأساسية*\n';
+            message += `🎈 اسم الطفل: ${formData.get('childName')}\n`;
+            message += `🎂 تاريخ الميلاد: ${formData.get('birthDate')}\n`;
+            message += `📱 رقم الهاتف: ${formData.get('phoneNumber')}\n`;
+            message += `📧 البريد الإلكتروني: ${formData.get('email') || 'غير مذكور'}\n`;
+            message += `👩 اسم الأم: ${formData.get('motherName')}\n`;
+            message += `👨 اسم الأب: ${formData.get('fatherName')}\n\n`;
+            
+            message += '🌍 *عالم الطفل الشخصي*\n';
+            message += `🎮 الهواية المفضلة: ${formData.get('hobby')}\n`;
+            message += `🦸‍♂️ البطل المفضل: ${formData.get('favoriteHero')}\n`;
+            message += `🎨 اللون المفضل: ${formData.get('favoriteColor')}\n`;
+            message += `🏡 مكان الأمان: ${formData.get('safePlace')}\n`;
+            message += `🔑 الكلمة السرية: ${formData.get('secretWord') || 'غير مذكورة'}\n\n`;
+            
+            message += '🎯 *التحدي أو السلوك*\n';
+            message += `💭 السلوك المراد تعديله: ${formData.get('behavior')}\n`;
+            message += `😊 كيف يعبر عنه: ${formData.get('behaviorExpression')}\n`;
+            message += `😰 المواقف المقلقة: ${formData.get('anxietySituations')}\n\n`;
+            
+            message += '💪 *نقاط القوة*\n';
+            message += `🏆 ما يتقنه: ${formData.get('strengths')}\n`;
+            message += `🦁 موقف الشجاعة: ${formData.get('braveMoment')}\n`;
+            message += `⚡ المهارات: ${formData.get('skills')}\n\n`;
+            
+            message += '❤️ *الأهداف الشعورية*\n';
+            message += `✨ الشعور المطلوب: ${formData.get('desiredFeeling')}\n`;
+            message += `⚡ القوة الخارقة: ${formData.get('superpower') || 'غير مذكورة'}\n`;
+            message += `👥 الشخصية الداعمة: ${formData.get('supportiveCharacter') || 'غير مذكورة'}\n`;
+            
+            const whatsappUrl = `https://wa.me/00963941777624?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            alert('شكراً لك! سيتم فتح الواتساب لإرسال الاستبيان 🎉');
+        });
+
+        // Download Survey Button
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const form = document.getElementById('surveyForm');
+            const formData = new FormData(form);
+            
+            let content = '🌟 استبيان مشروع أرونا 🌟\n\n';
+            content += '═══════════════════════════════\n\n';
+            
+            content += '📋 المعلومات الأساسية\n';
+            content += '─────────────────────────\n';
+            content += `🎈 اسم الطفل: ${formData.get('childName') || ''}\n`;
+            content += `🎂 تاريخ الميلاد: ${formData.get('birthDate') || ''}\n`;
+            content += `📱 رقم الهاتف: ${formData.get('phoneNumber') || ''}\n`;
+            content += `📧 البريد الإلكتروني: ${formData.get('email') || ''}\n`;
+            content += `👩 اسم الأم: ${formData.get('motherName') || ''}\n`;
+            content += `👨 اسم الأب: ${formData.get('fatherName') || ''}\n\n`;
+            
+            content += '🌍 فهم عالم الطفل الشخصي\n';
+            content += '─────────────────────────\n';
+            content += `🎮 الهواية أو اللعبة المفضلة:\n${formData.get('hobby') || ''}\n\n`;
+            content += `🦸‍♂️ البطل الخيالي أو الحيوان المفضل:\n${formData.get('favoriteHero') || ''}\n\n`;
+            content += `🎨 اللون المفضل: ${formData.get('favoriteColor') || ''}\n`;
+            content += `🏡 مكان الأمان: ${formData.get('safePlace') || ''}\n`;
+            content += `🔑 الكلمة السرية: ${formData.get('secretWord') || ''}\n\n`;
+            
+            content += '🎯 تحديد التحدي أو السلوك\n';
+            content += '─────────────────────────\n';
+            content += `💭 السلوك المحدد المراد تعديله:\n${formData.get('behavior') || ''}\n\n`;
+            content += `😊 كيف يعبر الطفل عن هذا التحدي:\n${formData.get('behaviorExpression') || ''}\n\n`;
+            content += `😰 المواقف المتكررة التي تسبب القلق:\n${formData.get('anxietySituations') || ''}\n\n`;
+            
+            content += '💪 استكشاف نقاط القوة\n';
+            content += '─────────────────────────\n';
+            content += `🏆 ما يتقنه الطفل ويشعر بالفخر:\n${formData.get('strengths') || ''}\n\n`;
+            content += `🦁 موقف أظهر فيه شجاعة أو طيبة:\n${formData.get('braveMoment') || ''}\n\n`;
+            content += `⚡ المهارة التي يمتلكها:\n${formData.get('skills') || ''}\n\n`;
+            
+            content += '❤️ الحالة الشعورية والأهداف\n';
+            content += '─────────────────────────\n';
+            content += `✨ الشعور المطلوب بعد سماع القصة: ${formData.get('desiredFeeling') || ''}\n`;
+            content += `⚡ القوة الخارقة المتمناة: ${formData.get('superpower') || ''}\n`;
+            content += `👥 الشخصية الداعمة في حياته:\n${formData.get('supportiveCharacter') || ''}\n\n`;
+            
+            content += '═══════════════════════════════\n';
+            content += `📅 تاريخ التعبئة: ${new Date().toLocaleDateString('ar-SY')}\n`;
+            
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `استبيان_أرونا_${formData.get('childName') || 'طفل'}_${new Date().toISOString().split('T')[0]}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.about-card, .value-card, .vm-box').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
